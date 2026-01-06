@@ -1,0 +1,16 @@
+@layer utilities {
+    .text-shadow {
+        text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Custom Gradients/Backgrounds difficult to manage purely with utility classes */
+.chess-bg {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #cbd5e1;
+}
+
+.beatup-bg {
+    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+    color: white;
+}

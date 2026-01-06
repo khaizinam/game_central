@@ -4,10 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game Central - Games Html5</title>
+    <script src="/assets/js/tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-color': '#0f172a',
+                        'card-bg': '#1e293b',
+                        'text-primary': '#f8fafc',
+                        'text-secondary': '#94a3b8',
+                        'accent': '#3b82f6',
+                        'accent-hover': '#2563eb',
+                        'footer-bg': '#020617',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="/assets/img/logo.png">
 </head>
 
-<body>
+<body class="bg-bg-color text-text-primary flex flex-col min-h-screen font-['Segoe_UI']">
+
+    <!-- Header -->
+    <header class="bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-white/10 px-4 py-4 md:px-8">
+        <nav class="max-w-[1400px] mx-auto flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-bold text-accent uppercase tracking-widest hover:opacity-90 transition-opacity">GamePortal</a>
+            <div class="flex gap-8">
+                <a href="index.html" class="font-medium text-accent">Games</a>
+                <a href="pages/about.html"
+                    class="font-medium text-text-secondary hover:text-accent transition-colors">About Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-[1400px] mx-auto p-4 md:p-8">
+        <h1
+            class="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+            Games</h1>
+
+        <!-- Grid System using Tailwind -->
+        <!-- Responsive mapping: 2cols (default/mobile) -> 3cols (md) -> 4cols (lg) -> 5cols (xl) -->
+        <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+
+            <!-- Chess Card -->
+            <a href="https://chess.khaizinam.io.vn"
+                class="group bg-card-bg rounded-xl overflow-hidden border border-white/5 shadow-lg hover:-translate-y-1 hover:shadow-2xl hover:border-accent transition-all duration-300 flex flex-col aspect-[3/4]">
+                <div
+                    class="h-[60%] w-full chess-bg flex items-center justify-center text-6xl group-hover:scale-105 transition-transform duration-500">
+                    ♛
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-text-primary">Chess</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Master the classic strategy game.
+                            Challenge your mind.</p>
+                    </div>
+                    <span
+                        class="mt-4 block w-full py-2 bg-accent text-white rounded-md text-center font-medium group-hover:bg-accent-hover transition-colors">Play
+                        Now</span>
+                </div>
+            </a>
+
+            <!-- Beatup Card -->
+            <a href="beatup/index.html"
+                class="group bg-card-bg rounded-xl overflow-hidden border border-white/5 shadow-lg hover:-translate-y-1 hover:shadow-2xl hover:border-accent transition-all duration-300 flex flex-col aspect-[3/4]">
+                <div
+                    class="h-[60%] w-full beatup-bg flex items-center justify-center text-6xl group-hover:scale-105 transition-transform duration-500">
+                    ♫
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-text-primary">Beatup</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Rhythm and action. Hit the beats!</p>
+                    </div>
+                    <span
+                        class="mt-4 block w-full py-2 bg-accent text-white rounded-md text-center font-medium group-hover:bg-accent-hover transition-colors">Play
+                        Now</span>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-footer-bg py-12 px-8 text-text-secondary border-t border-white/5 mt-auto">
+        <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-6">
+            <div class="text-2xl font-bold text-text-primary">Games Html5</div>
+            <div class="flex gap-8">
+                <a href="index.html" class="hover:text-accent transition-colors">Games</a>
+                <a href="pages/about.html" class="hover:text-accent transition-colors">About Us</a>
+            </div>
+            <div class="text-sm opacity-70">
+                &copy; 2024 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
 
 </body>
 
